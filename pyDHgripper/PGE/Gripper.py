@@ -37,7 +37,7 @@ def in_range(val,
 
 class Gripper(object):
     def __init__(self, 
-                 port="/dev/ttyUSB0") -> None:
+                 port="/tmp/ttyUR") -> None:
         '''Initialize the gripper.
         
         Args:
@@ -384,7 +384,7 @@ class Gripper(object):
                         val=val)
 
 if __name__ == "__main__":
-    gripper = Gripper(port="/dev/ttyUSB0")
+    gripper = Gripper(port="/tmp/ttyUR")
     time.sleep(0.2)
     gripper.set_pos(800)
 
